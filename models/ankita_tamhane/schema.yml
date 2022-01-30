@@ -1,0 +1,30 @@
+
+version: 2
+
+models:
+    - name: covid_data_country
+      description: "Raw Source Data of Covid Cases in Indonesia"
+      columns:
+          - name: date
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: covid_data_province
+      description: "Raw Source Data of Covid Cases per Province"
+      columns:
+          - name: date
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: country_wise_total
+      description: "Total cases/deaths/recovered for country per date"
+
+    - name: country_wise_new
+      description: "New Cases/deaths/recovered for Country per date"
+
+    - name: per_province_peak_of_deaths
+      description: "Peak of deaths per province"
